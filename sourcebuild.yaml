@@ -10,6 +10,7 @@ spec:
     #  name: "aws"
     git:
       uri: "https://github.com/DerBrecher/sourcetofrontend.git"
+      ref: "master"
   strategy:
     dockerStrategy:
       dockerfilePath: Dockerfile
