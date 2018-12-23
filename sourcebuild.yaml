@@ -12,8 +12,7 @@ spec:
       uri: "https://github.com/DerBrecher/sourcetofrontend.git"
       ref: "master"
   strategy:
-    customStrategy:
-      exposeDockerSocket: true
+    dockerStrategy:
       dockerfilePath: Dockerfile
   output:
     to:
