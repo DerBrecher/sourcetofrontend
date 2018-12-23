@@ -4,7 +4,7 @@ RUN echo "NodeJS"
 RUN ls
 
 
-//FROM httpd:2.4
+#FROM httpd:2.4
 
-//RUN echo "Httpd"
-//RUN ls
+#RUN echo "Httpd"
+#RUN ls
