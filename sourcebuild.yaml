@@ -11,6 +11,7 @@ spec:
     git:
       uri: "https://github.com/DerBrecher/sourcetofrontend.git"
       ref: "master"
+    contextDir: scripts
   strategy:
     dockerStrategy:
       dockerfilePath: Dockerfile
