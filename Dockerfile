@@ -16,4 +16,5 @@ FROM centos/httpd-24-centos7
 WORKDIR /wwwdata/html
 COPY --from=0 /app/output/ .
 RUN echo "Httpd"
+RUN pwd
 RUN ls
