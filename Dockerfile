@@ -6,7 +6,8 @@ COPY . /app
 RUN echo "NodeJS"
 #RUN find . -name sourcebuild.yaml
 RUN ls
-RUN mkdir output && \
+RUN rm -rf output && \
+	mkdir output && \
 	cp -rf scripts/ output/ && \
 	cp index.html output/
 
