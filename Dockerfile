@@ -13,7 +13,7 @@ RUN rm -rf output && \
 
 #Run
 FROM centos/httpd-24-centos7
-WORKDIR /page/
+WORKDIR /wwwdata/html
 COPY --from=0 /app/output/ .
 RUN echo "Httpd"
 RUN ls
