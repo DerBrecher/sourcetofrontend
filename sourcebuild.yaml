@@ -4,13 +4,11 @@ metadata:
   name: "frontend-builder"
 spec:
   source:
-    #git:
-    #  uri: "https://git-codecommit.eu-central-1.amazonaws.com/v1/repos/trackntrace-Frontend"
-    #sourceSecret:
-    #  name: "aws"
     git:
-      uri: "https://github.com/DerBrecher/sourcetofrontend.git"
+      uri: "https://git-codecommit.eu-central-1.amazonaws.com/v1/repos/trackntrace-Frontend"
       ref: "master"
+    sourceSecret:
+      name: "aws"
   strategy:
     dockerStrategy:
       dockerfilePath: Dockerfile
