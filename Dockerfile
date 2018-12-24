@@ -1,5 +1,6 @@
 #Build
 FROM node:10
+
 WORKDIR /app/
 COPY . /app/
 
@@ -11,8 +12,10 @@ RUN rm -rf output && \
 	cp -rf scripts/ output/ && \
 	cp index.html output/
 
+
 #Run
 FROM centos/httpd-24-centos7
+
 WORKDIR /var/www/html/
 COPY --from=0 /app/output/ .
 
