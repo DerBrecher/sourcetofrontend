@@ -12,7 +12,7 @@ RUN rm -rf output && \
 	cp index.html output/
 
 #Run
-FROM httpd:2.4
+FROM centos/httpd-24-centos7
 WORKDIR /usr/local/apache2/htdocs/
 COPY --from=0 /app/output/ .
 
