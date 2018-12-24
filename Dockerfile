@@ -1,7 +1,7 @@
 FROM node:10
 
-WORKDIR /app
-COPY . /app
+WORKDIR /app/
+COPY . /app/
 
 RUN echo "NodeJS"
 #RUN find . -name sourcebuild.yaml
@@ -13,6 +13,7 @@ RUN rm -rf output && \
 
 
 FROM httpd:2.4
+WORKDIR /page/
 COPY --from=0 /app/output/ .
 RUN echo "Httpd"
 RUN ls
