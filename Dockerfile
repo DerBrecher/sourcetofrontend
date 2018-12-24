@@ -1,21 +1,20 @@
 #Build
-#FROM node:10
-#WORKDIR /app/
-#COPY . /app/
-#
-#RUN echo "NodeJS"
-##RUN find . -name sourcebuild.yaml
-#RUN ls
-#RUN rm -rf output && \
-#	mkdir output && \
-#	cp -rf scripts/ output/ && \
-#	cp index.html output/
+FROM node:10
+WORKDIR /app/
+COPY . /app/
+
+RUN echo "NodeJS"
+#RUN find . -name sourcebuild.yaml
+RUN ls
+RUN rm -rf output && \
+	mkdir output && \
+	cp -rf scripts/ output/ && \
+	cp index.html output/
 
 #Run
 FROM centos/httpd-24-centos7
 WORKDIR /wwwdata/html
-#COPY --from=0 /app/output/ .
-COPY . /wwwdata/html/
+COPY --from=0 /app/output/ .
 RUN echo "Httpd"
 RUN pwd
 RUN ls
