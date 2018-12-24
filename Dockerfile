@@ -1,5 +1,5 @@
+#Build
 FROM node:10
-
 WORKDIR /app/
 COPY . /app/
 
@@ -11,8 +11,8 @@ RUN rm -rf output && \
 	cp -rf scripts/ output/ && \
 	cp index.html output/
 
-
-FROM httpd:2.4
+#Run
+FROM centos/httpd-24-centos7
 WORKDIR /page/
 COPY --from=0 /app/output/ .
 RUN echo "Httpd"
