@@ -1,7 +1,7 @@
 FROM node:10
 
 RUN echo "NodeJS"
-RUN find . -name sourcebuild.yaml exit(0);
+RUN find . -name sourcebuild.yaml; exit(0)
 RUN ls
 
 
